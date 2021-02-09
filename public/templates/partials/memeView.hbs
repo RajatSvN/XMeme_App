@@ -1,0 +1,33 @@
+<!--
+An array of meme objects are passed in context to this view which loads the content in UI, You can check the logic
+in the only route present in in src/routers/ui.js
+-->
+
+{{#each memeList}}
+    
+    <div class="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-800 p-4 rounded-xl border max-w-md mb-4">
+        <div class="flex justify-between">
+          <div class="flex items-center">
+            <div class="ml-1.5 text-sm leading-tight">
+              <span class="text-black dark:text-white font-bold block">{{ name }}</span>
+            </div>
+          </div>
+        </div>
+        
+        <p class="text-black dark:text-white block text-xl leading-snug mt-3">{{ caption }}</p>
+        
+        <div class="flex justify-center">
+            
+        <img class="mt-2 rounded-2xl border border-gray-100 dark:border-gray-700 w-auto h-auto" src="{{ url }}"/>
+        
+      </div>
+
+      <p class="text-gray-500 dark:text-gray-400 text-base py-1 my-0.5">{{ dateTime }}</p>
+
+      </div>
+
+
+        {{>editForm}}
+              
+
+{{/each}}

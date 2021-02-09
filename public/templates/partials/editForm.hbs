@@ -1,0 +1,40 @@
+<div class="px-4 py-5 bg-white space-y-6 grid justify-items-center w-full" id='editForm-{{id}}' style="display: none;">
+      
+
+      <!-- Meme Caption Input Field-->
+                  <div class="sm:w-3/6 w-5/6">
+                    <label for="caption" class="block text-sm font-medium text-gray-700">Caption</label>
+                    <input type="text" name="caption" id="caption-{{id}}" placeholder="Time to be a Picasso with your new caption" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    
+                </div>
+
+            <!-- Meme URL Input Field-->
+                  <div class="sm:w-3/6 w-5/6">
+                    <label for="url" class="block text-sm font-medium text-gray-700">
+                        Meme URL
+                    </label>
+                    <div class="mt-1 flex rounded-md shadow-sm">
+                      <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                        http://
+                      </span>
+                      <input type="text" name="url" id="url-{{id}}" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="www.example.com">
+                    </div>
+                    
+                  </div>
+            </div>
+
+            <span class="error mb-2" id="errorMessage-{{id}}"></span>
+              <span class="success mb-2" id="successMessage-{{id}}"></span>
+
+            <!-- Edit Meme Button -->
+              <div class="px-4 py-3 text-right sm:px-6 mb-4">
+                
+                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" onclick="editMeme('{{id}}')">
+                  Edit Above Meme
+                </button>
+
+                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 close" id="closeButton-{{id}}" onclick="hideForm('{{id}}')" style="display: none;">
+                  X
+                </button>
+
+              </div>
