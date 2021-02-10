@@ -36,8 +36,7 @@ const publicDirPath = path.join(__dirname, '../public/')
 const viewsPath = path.join(__dirname, '../public/templates/views')
 const partialsPath = path.join(__dirname, '../public/templates/partials')
 
-const ip = require('./utils/ec2IP.js')
-
+const ip = require('./utils/ec2IP.js').ec2PublicIP
 
 // meta information for swagger api docs 
 const swaggerOptions = {
@@ -55,7 +54,7 @@ const swaggerOptions = {
         },
         servers: [
             {
-            url:'http://'+ip.ec2PublicIP+':8081'
+            url:'http://'+ip+':8081'
         }
     ]
         
@@ -80,10 +79,10 @@ app.use(memeRouter)
 app.use(uiRouter)
 
 app.listen(port, () => {
-    console.log('Server up and running on Port '+port)
+    console.log('Server up and running on http://'+ip+':'+port)
 })
 
 swaggerApp.listen(swaggerPort, ()=> {
-    console.log('Swagger running on port 8080')
+    console.log('Swagger Docs running on http://'+ip+':'+swaggerPort+'/swagger-ui/')
 })
 

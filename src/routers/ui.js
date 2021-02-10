@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
     res.render('index',{
         title : "XMeme",
         memeList,
-        ec2PublicIP: ip.ec2PublicIP
+        ec2PublicIP: ip
     })
 
     } catch (e){
