@@ -36,6 +36,9 @@ const publicDirPath = path.join(__dirname, '../public/')
 const viewsPath = path.join(__dirname, '../public/templates/views')
 const partialsPath = path.join(__dirname, '../public/templates/partials')
 
+const { ec2PublicIP } = require('./utils/ec2IP.js').ec2PublicIP
+console.log(ec2PublicIP)
+
 // meta information for swagger api docs 
 const swaggerOptions = {
     definition: {
@@ -52,7 +55,7 @@ const swaggerOptions = {
         },
         servers: [
             {
-            url:'http://localhost:8081'
+            url:'http://'+ec2PublicIP+':8081'
         }
     ]
         
