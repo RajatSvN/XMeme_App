@@ -1,5 +1,5 @@
 const ec2 = require('ec2-publicip')
-const ec2PublicIP = ''
+let ec2PublicIP = ''
 ec2.getPublicIP((error, ip) => {
 
     if(error){

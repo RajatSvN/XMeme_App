@@ -4,8 +4,7 @@ This router is used to render the UI i.e the frontend of the application
 const express = require('express')
 const router = express.Router()
 const Memes = require('../models/memes')
-const { ec2PublicIP } = require('../utils/ec2IP.js').ec2PublicIP
-console.log( ec2PublicIP )
+const ip = require('../utils/ec2IP.js').ec2PublicIP
 
 router.get('/', async (req, res) => {
 
@@ -30,7 +29,7 @@ router.get('/', async (req, res) => {
     res.render('index',{
         title : "XMeme",
         memeList,
-        ec2PublicIP
+        ec2PublicIP: ip.ec2PublicIP
     })
 
     } catch (e){
