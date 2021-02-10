@@ -8,6 +8,9 @@ hbs: Handelbars Templating Engine
 swagger-jsdoc, swagger-ui-express: for generating Swagger Docs for API 
 */
 
+// load environment variable
+require('dotenv').config()
+
 // load in the dependencies for the application
 const express = require('express')
 const cors = require('cors')
@@ -36,7 +39,7 @@ const publicDirPath = path.join(__dirname, '../public/')
 const viewsPath = path.join(__dirname, '../public/templates/views')
 const partialsPath = path.join(__dirname, '../public/templates/partials')
 
-const ip = require('./utils/ec2IP.js').ec2PublicIP
+const ip = process.env.IP_ADDRESS
 
 // meta information for swagger api docs 
 const swaggerOptions = {
