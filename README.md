@@ -41,8 +41,8 @@ $ git clone repo_url_here
 - Setup the Server and run basic tests using the test_server.sh by typing the following command
 
 ```sh
-$ chmod +x setup_server.sh
-$ sudo ./setup_server.sh
+$ chmod +x test_server.sh
+$ sudo ./test_server.sh
 ```
 
 - New to AWS? See [AWS_Help](https://medium.com/serverlessguru/creating-an-aws-ec2-instance-d5cf332fdb0c)
