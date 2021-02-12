@@ -38,7 +38,7 @@ $ git clone repo_url_here
 
 - cd into the cloned repo
 
-- now run the following commands to install Node.js, MongoDB, This will aslo start the app
+- Setup the Server and run basic tests using the test_server.sh by typing the following command
 
 ```sh
 $ chmod +x setup_server.sh
@@ -47,34 +47,6 @@ $ sudo ./setup_server.sh
 
 - New to AWS? See [AWS_Help](https://medium.com/serverlessguru/creating-an-aws-ec2-instance-d5cf332fdb0c)
 
- # Testing the REST API
- 
- **Please consider the following points before configuring your tests**
-
- **APP DOES NOT RUN ON LOCALHOST ❌**
-
- **The APP Runs on http://public_ipv4:8081/ and swagger on http://public_ipv4:8080/swagger-ui/**
-
- **public_ipv4 ip is what you used during ssh**
-
- **It will also be visible in the console as below:**
-
- ![App Status](https://devrajat.com/XMeme-Readme-Assets/app_status.JPG)
-
-**App running on Public IP using Port 8081**
-
- ![App on Public IP](https://devrajat.com/XMeme-Readme-Assets/app_publicip.JPG)
-
-**Swagger docs on Public IP using Port 8080**
-
- ![Swagger Docs on Public IP](https://devrajat.com/XMeme-Readme-Assets/swagger_public_ip.JPG)
-
- **Your tests should look like this**
-
- ![Test Script](https://devrajat.com/XMeme-Readme-Assets/test_server.JPG)
-
-
- That is all to testing! You can check the app on public ip of instance as mentioned above and **test the API through swagger** too if you want.
 
  [Tailwindcss]: <https://tailwindcss.com/>
  [handlebars]: <https://www.npmjs.com/package/hbs>
