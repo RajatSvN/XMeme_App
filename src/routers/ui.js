@@ -4,7 +4,7 @@ This router is used to render the UI i.e the frontend of the application
 
 // load environment variable
 require('dotenv').config()
-let ip = process.env.IP_ADDRESS
+let ip = process.env.IP_ADDRESS ? process.env.IP_ADDRESS : "localhost"
 
 const express = require('express')
 const router = express.Router()
