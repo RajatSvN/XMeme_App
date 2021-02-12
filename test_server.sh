@@ -3,7 +3,7 @@
 
 # git clone the repo
 
-# cd to the cloned repo directory
+# cd to the cloned repo directory, please run only after cd into repo 
 
 
 # Run the user’s installation steps which will install any necessary dependencies required for the server to run, with sudo permission
@@ -27,3 +27,36 @@ chmod +x server_run.sh
 chmod +x sleep.sh
 
 ./sleep.sh
+
+
+# Execute the GET /memes endpoint using curl to ensure your DB is in a clean slate
+
+# Should return an empty array.
+
+curl --location --request GET 'http://localhost:8081/memes'
+
+
+# Execute the POST /memes endpoint using curl
+
+curl --location --request POST 'http://<Server_URL>/memes' \
+
+--header 'Content-Type: application/json' \
+
+--data-raw '{
+
+"name": "xyz",
+
+"url": "abc.com",
+
+"caption": "This is a meme"
+
+}'
+
+
+# Execute the GET /memes endpoint using curl
+
+curl --location --request GET 'http://localhost:8081/memes'
+
+
+# If you have swagger enabled, make sure it is exposed at localhost:8080
+curl --location --request GET 'http://localhost:8080/swagger-ui/'

@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
     memes.forEach(meme => {
         
         // generate an extra field date time to be displayed in frontend
-        const dateTime = new Date(meme.updatedAt).toLocaleString()
+        const dateTime = new Date(meme.updatedAt).toLocaleString(undefined, {timeZone: 'Asia/Kolkata'})
         
         const {_id:id, name, caption, url} = meme
 

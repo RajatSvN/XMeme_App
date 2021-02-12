@@ -41,8 +41,6 @@ const partialsPath = path.join(__dirname, '../public/templates/partials')
 
 const ip = process.env.IP_ADDRESS ? process.env.IP_ADDRESS : "localhost"
 
-console.log(ip)
-
 // meta information for swagger api docs 
 const swaggerOptions = {
     definition: {
