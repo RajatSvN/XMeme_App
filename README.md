@@ -18,6 +18,13 @@ XMeme is a simple meme stream app in which you can
  * [MongoDB] - General purpose, document based NoSQL Database
  * [Swagger] - Document your Rest APIs seamlessly with Swagger Docs
 
+ # Tools
+
+ These tools came in very handy while developing the application
+
+ * [Postman] - Industry standard for everything to do with APIs
+ * [Robo 3T] - GUI to connect to MongoDB database, formerly Robomongo
+
  # Installation on AWS EC2 Ubuntu 18.04 x86
 
 - Deploy an AWS EC2 Ubuntu 18.04 x86 VM from AWS Console
@@ -47,11 +54,28 @@ $ sudo ./test_server.sh
 
 - New to AWS? See [AWS_Help](https://medium.com/serverlessguru/creating-an-aws-ec2-instance-d5cf332fdb0c)
 
+# Creating the Docker 🐳 Image
 
+- You can simply spin up the application using Docker locally by issuing this command from root of repo, 
+
+```sh
+$ docker-compose up -d # Start as background process
+$ # add sleep script , sleep 300 would be a good estimate
+$ # add test script below 
+```
+
+**Note:** Please make sure you have docker and docker-compose installed on your system.
+
+- New to Docker? See [Docker_Install](https://k21academy.com/docker-kubernetes/docker-installation-overview/),  [Docker_Compose_Install](https://docs.docker.com/compose/install/), 
+[Docker_Compose](https://docs.docker.com/compose/gettingstarted/)
+
+ 
  [Tailwindcss]: <https://tailwindcss.com/>
  [handlebars]: <https://www.npmjs.com/package/hbs>
  [Node.js]: <https://nodejs.org/en/>
  [Express]: <https://expressjs.com/>
  [MongoDB]: <https://www.mongodb.com/>
  [Swagger]: <https://swagger.io/>
+ [Postman]: <https://www.postman.com/>
+ [Robo 3T]: <https://robomongo.org/>
  [Here]: <https://xmeme-memestream.herokuapp.com/>
